@@ -9,6 +9,65 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <h1>Welcome to the blogs</h1>
+    
+    <header  class="bg-white/50 backdrop-blur-md shadow-md sticky top-0 z-50"></header>
+        <nav>
+
+            <div class="navbar bg-base-100 bg-[#fcf5d6] flex-wrap lg:flex-nowrap">
+                <div class="navbar-start lg:ml-10">
+                    <a href="./index.html" class="btn lg:w-20 font-bold bg-[#B4F461]">Home</a>
+                </div>
+                <div class="navbar-center">
+                  <a class="btn btn-ghost font-bold text-2xl"> <img src="assets/logo.png" alt=""> Donate Bangladesh</a>
+                </div>
+                <div class="navbar-end">
+
+                    <div class="flex items-center space-x-2 lg:mr-10">
+                         <img src="assets/coin.png" alt=""> 
+                         <span class="font-semibold">5500 BDT</span>
+                    </div>
+
+                </div>
+              </div>
+              <br> <br>
+              
+
+        </nav>
+    </header>
+
+    <main class="md:container mx-auto p-4">
+        <h1 class="font-extrabold text-4xl">Important FAQ  </h1>
+        <br> <br>
+        <div class="join join-vertical w-full">
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" checked="checked" />
+              <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+              <div class="collapse-content">
+                <p>The Document Object Model (DOM) is a programming interface that represents a webpage as a structured tree of objects, allowing scripts to access and manipulate its content, structure, and styles.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+              <div class="collapse-content">
+                <p>To select an element from the DOM, you can use methods like document.getElementById(), document.querySelector(), or document.getElementsByClassName().</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+              <input type="radio" name="my-accordion-4" />
+              <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+              <div class="collapse-content">
+                <p>Event delegation is a technique where a single event listener is attached to a parent element to manage events triggered by its child elements, which is efficient when dynamically adding elements or handling many similar events.</p>
+              </div>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+                <input type="radio" name="my-accordion-4" />
+                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                <div class="collapse-content">
+                  <p>To manipulate an element's attributes and styles, you can use setAttribute(), removeAttribute(), or access properties like element.style to modify CSS styles directly.</p>
+                </div>
+              </div>
+          </div>
+    </main>
 </body>
 </html>

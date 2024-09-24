@@ -1,7 +1,7 @@
 // Re usable function
-function addMoney(event, balanceId){
+function addMoney(event, balanceId, moneyInput){
     event.preventDefault();
-    const addMoneyInput = document.getElementById('add-money-input').value;
+    const addMoneyInput = document.getElementById(moneyInput).value;
 
     if( !isNaN(addMoneyInput) && addMoneyInput > 0 ){
         const balance = document.getElementById(balanceId).innerText;
@@ -24,17 +24,17 @@ function addMoney(event, balanceId){
 // Noakhali part
 document.getElementById('btn-add-money').addEventListener('click', 
 function(event){
-    addMoney(event,'noa-balance') 
+    addMoney(event,'noa-balance', 'add-money-input') 
 })
 
 // Feni part
 document.getElementById('btn-add-money2').addEventListener('click', function(event){
-    addMoney(event,'feni-balance')
+    addMoney(event,'feni-balance', 'add-money-input2')
 })
 
 // Quota part
 document.getElementById('btn-add-money3').addEventListener('click', function(event){
-    addMoney(event, 'quota-balance')
+    addMoney(event, 'quota-balance', 'add-money-input3')
 })
 
 

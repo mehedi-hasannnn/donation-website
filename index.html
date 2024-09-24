@@ -35,16 +35,17 @@
             </div>
               <br> <br>
               <div class="flex justify-center space-x-4">
-                  <a class="btn font-bold w-32 bg-[#B4F461]">Donation</a>
-                  <a class="btn font-bold w-32 bg-[#B4F461]">History</a>
+                  <button id="btn-show-donation" class="btn font-bold w-32 bg-[#B4F461]">Donation</button>
+                  <button id="btn-show-history" class="btn font-bold w-32 bg-[#B4F461]">History</button>
               </div>
               <br> <br> <br>
         </nav>
     </header>
     <main class="md:container mx-auto">
 
-        <!-- Noakhali part starts -->
-        <div class="hero border rounded-lg mt-4">
+     <section id="donation">
+           <!-- Noakhali part starts -->
+           <div class="hero border rounded-lg mt-4">
             <div class="hero-content flex-col lg:flex-row lg:h-full items-center justify-center">
                 <div class="h-full w-full lg:w-1/2 flex justify-center items-center">
                     <img src="assets/noakhali.png" alt="" class="object-cover h-full w-full rounded-lg">
@@ -108,7 +109,7 @@
                         <p>The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
     
                         <div class="form-control">
-                            <input type="number" placeholder="Write Donation Amount" class="input input-bordered" required />
+                            <input id="add-money-input2" type="number" placeholder="Write Donation Amount" class="input input-bordered" required />
                         </div>
                         <div class="form-control mt-2">
                             <button id="btn-add-money2" class="btn text-black font-bold bg-[#B4F461]">Donate Now</button>
@@ -138,7 +139,7 @@
                         <p>The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
     
                         <div class="form-control">
-                            <input type="number" placeholder="Write Donation Amount" class="input input-bordered" required />
+                            <input id="add-money-input3" type="number" placeholder="Write Donation Amount" class="input input-bordered" required />
                         </div>
                         <div class="form-control mt-2">
                             <button id="btn-add-money3" class="btn text-black font-bold bg-[#B4F461]">Donate Now</button>
@@ -148,6 +149,13 @@
             </div>
         </div>
         <!-- Quota movement part ends -->
+     </section>
+
+     <section id="history" class="hidden">
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde minus magni quae aut quisquam velit exercitationem quos eos, eligendi dolorum et, perspiciatis inventore nisi cumque sint quas atque perferendis vero quibusdam magnam eius corrupti laboriosam ratione. Nulla ab accusantium qui voluptate ea laboriosam obcaecati, ut, repellat placeat vitae incidunt. Maxime?</p>
+
+     </section>
     
     </main>
 
@@ -202,6 +210,7 @@
         </nav>
       </footer>
       <script src="js/donation.js"></script>
+      <script src="js/toggle.js"></script>
     
 </body>
 </html>

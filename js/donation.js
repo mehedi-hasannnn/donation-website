@@ -2,8 +2,10 @@
 function addMoney(event, balanceId, moneyInput){
     event.preventDefault();
     const addMoneyInput = document.getElementById(moneyInput).value;
-
-    if( !isNaN(addMoneyInput) && addMoneyInput > 0 ){
+    const currentBalance = document.getElementById('account-balance').innerText;
+    const curBalance = parseFloat(currentBalance);
+    console.log(curBalance);
+    if( !isNaN(addMoneyInput) && addMoneyInput > 0  && curBalance >= addMoneyInput ){
         const balance = document.getElementById(balanceId).innerText;
         const accountBalance = document.getElementById('account-balance').innerText;
         const addMoneyNumber = parseFloat(addMoneyInput);
@@ -14,6 +16,32 @@ function addMoney(event, balanceId, moneyInput){
         document.getElementById(balanceId).innerText = newBalance;
         document.getElementById('account-balance').innerText = newAccountBalance;
         document.getElementById('my_modal_5').showModal();
+
+        // transaction
+        const p = document.createElement('p');
+        p.innerText = ` ${addMoneyNumber} Taka is Donated for affected peoples at ${balanceId}`
+
+        document.getElementById('transaction').appendChild(p);
+
+        p.style.textAlign = 'center'; 
+        p.style.fontWeight = 'bold';  
+        p.style.marginTop = '20px';   
+        p.style.marginBottom = '10px';
+        const hr = document.createElement('hr');
+        hr.style.width = '80%';   
+        hr.style.margin = '10px auto';
+
+        const transactionContainer = document.getElementById('transaction');
+        transactionContainer.appendChild(hr); 
+        transactionContainer.appendChild(p);
+
+        const nowdate = new Date().toString();
+        const datep = document.createElement('p');
+        datep.innerText = `Date: ${nowdate}`;
+        datep.style.textAlign = 'center';
+        datep.style.marginTop = '10px';
+        datep.style.marginBottom = '20px';
+        transactionContainer.appendChild(datep);
     }
 
     else{
@@ -24,17 +52,17 @@ function addMoney(event, balanceId, moneyInput){
 // Noakhali part
 document.getElementById('btn-add-money').addEventListener('click', 
 function(event){
-    addMoney(event,'noa-balance', 'add-money-input') 
+    addMoney(event,'Noakhali,Bangladesh', 'add-money-input') 
 })
 
 // Feni part
 document.getElementById('btn-add-money2').addEventListener('click', function(event){
-    addMoney(event,'feni-balance', 'add-money-input2')
+    addMoney(event,'Feni,Bangladesh', 'add-money-input2')
 })
 
 // Quota part
 document.getElementById('btn-add-money3').addEventListener('click', function(event){
-    addMoney(event, 'quota-balance', 'add-money-input3')
+    addMoney(event, 'Quota Movement,Bangladesh', 'add-money-input3')
 })
 
 

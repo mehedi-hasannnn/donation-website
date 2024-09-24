@@ -25,7 +25,7 @@
     
                         <div class="flex items-center space-x-2 lg:mr-10">
                              <img src="assets/coin.png" alt=""> 
-                             <span class="font-semibold">5500</span>
+                             <span id="account-balance" class="font-semibold">5500</span>
                              <span class="font-semibold">BDT</span>
                         </div>
     
@@ -54,7 +54,7 @@
                     <form class="card-body h-full flex flex-col justify-between">
                         <div class="flex items-center space-x-2">
                             <img src="assets/coin.png" alt="">
-                            <span class="font-semibold">5500</span>
+                            <span id="noa-balance" class="font-semibold">70000</span>
                             <span class="font-semibold">BDT</span>
                         </div>
     
@@ -62,15 +62,31 @@
                         <p>The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies to those affected by this disaster. Every contribution, big or small, makes a difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
     
                         <div class="form-control">
-                            <input type="number" placeholder="Write Donation Amount" class="input input-bordered" required />
+                            <input id="add-money-input" type="number" placeholder="Write Donation Amount" class="input input-bordered" required />
                         </div>
                         <div class="form-control mt-2">
-                            <button class="btn text-black font-bold bg-[#B4F461]">Donate Now</button>
+                            <button  type="submit" id="btn-add-money" class="btn text-black font-bold bg-[#B4F461]">Donate Now</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
+
+         <!-- Modal part starts-->
+         <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <h3 class="text-4xl font-extrabold text-center">Congrats!</h3>
+                <br>
+                <img src="assets/coin.png" class="mx-auto" alt="">
+                <p class="py-4 text-center">You have donated for Humankind</p>
+                <h3 class="text-2xl font-bold text-center">Successfully</h3>
+                <div class="modal-action">
+                    <button class="btn mx-auto" id="close-modal-btn">Close Confirmation</button>
+                </div>
+            </div>
+        </dialog>
+        <!-- Modal part ends -->
+
         <!-- Noakhali part ends -->
     
         <!-- Feni part starts -->
@@ -84,7 +100,7 @@
                     <form class="card-body h-full flex flex-col justify-between">
                         <div class="flex items-center space-x-2">
                             <img src="assets/coin.png" alt="">
-                            <span class="font-semibold">5500</span>
+                            <span id="feni-balance" class="font-semibold">20000</span>
                             <span class="font-semibold">BDT</span>
                         </div>
     
@@ -95,7 +111,7 @@
                             <input type="number" placeholder="Write Donation Amount" class="input input-bordered" required />
                         </div>
                         <div class="form-control mt-2">
-                            <button class="btn text-black font-bold bg-[#B4F461]">Donate Now</button>
+                            <button id="btn-add-money2" class="btn text-black font-bold bg-[#B4F461]">Donate Now</button>
                         </div>
                     </form>
                 </div>
@@ -114,7 +130,7 @@
                     <form class="card-body h-full flex flex-col justify-between">
                         <div class="flex items-center space-x-2">
                             <img src="assets/coin.png" alt="">
-                            <span class="font-semibold">5500</span>
+                            <span id="quota-balance" class="font-semibold">10000</span>
                             <span class="font-semibold">BDT</span>
                         </div>
     
@@ -125,7 +141,7 @@
                             <input type="number" placeholder="Write Donation Amount" class="input input-bordered" required />
                         </div>
                         <div class="form-control mt-2">
-                            <button class="btn text-black font-bold bg-[#B4F461]">Donate Now</button>
+                            <button id="btn-add-money3" class="btn text-black font-bold bg-[#B4F461]">Donate Now</button>
                         </div>
                     </form>
                 </div>
@@ -185,6 +201,7 @@
           </div>
         </nav>
       </footer>
+      <script src="js/donation.js"></script>
     
 </body>
 </html>
